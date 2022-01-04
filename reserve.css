@@ -64,9 +64,7 @@ body{
       display: flex;
       flex-direction: column;
       
-  }
-  
-    
+  }    
 
   }
   .icon span:hover{
@@ -93,7 +91,21 @@ body{
       border-radius: 6px;
       border: 1px ;}
 
-
+      .footer{
+        display: flex;
+          justify-content: space-around;
+          padding: 20px;
+          background-color: rgb(32, 31, 31);
+          color: white;
+          margin-left: -20%;
+          margin-right: -5px;
+          margin-top: 12px;
+      }
+      .footer-a{
+        margin-left: 5px;
+        text-decoration: none;
+        color: white;
+      }
 
 
 
@@ -181,7 +193,7 @@ body{
         font-weight: 500;
         background-color: #ff7200;
         color:black  ;
-        padding:10px 25px;
+        padding:10px 18px;
     }
     input{
         border: none;
@@ -195,7 +207,7 @@ body{
 
     .reservation{
       margin-left: 15%;
-    margin-top: 8%;
+    margin-top: 4%;
     }
 
 
@@ -207,4 +219,45 @@ body{
         flex-direction: column;
         gap: 10px;
     }
+
+    .inner {
+      background-color: #ececec;
+      width: 60vw;
+      height: 75vh;
+      padding: 50px 50px 10px 50px;
+      padding-top: 50px;
+      box-shadow: 0px 5px 18px rgb(0 0 0 / 60%);
+      display: flex;
+      justify-content: space-around;
+      border-radius: 20px;
+  }
+  .day {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .reservation {
+    margin-left: 4%;
+    margin-top: 25%;
+}
+  .reservation .tranmission >div >div {
+    margin-right: 53px;
+  }
+  select, input {
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: -20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: rgb(32, 31, 31);
+  color: white;
+  margin-left: -11%;
+  margin-right: -5px;
+  margin-top: 12px;
+}
+  
     }
