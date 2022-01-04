@@ -1,0 +1,210 @@
+body{
+    
+    font-family: arial;
+}
+.logo{
+    width: 12%;
+    margin-left: 6%;
+    margin-top: 2%;
+}
+.links{
+    display: flex;
+    margin-top: 5%;
+    margin-right: 10%;
+    float: right;
+    list-style: none;
+}
+.links li a{
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-flex;
+    font-weight: bold;
+    color: black;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(5, 5, 5);
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    
+   .logo{
+     display: none;
+   }
+    .toggle-button {
+        display: flex;
+    }
+    .links{
+      display: none;
+      
+    }
+    .links.active{
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(247, 243, 243);
+      padding: 10px;
+      
+    }
+    .product-field ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+    
+
+  }
+  .icon span:hover{
+    background: var(--gra);
+    cursor: pointer;
+  }
+  .detail > strong{
+    display: inherit;
+    margin: 20px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #555;
+  }
+  .detail > span{
+    display: inherit;
+    padding: 0 20px;
+      width: 80%;
+  }
+  .detail small{
+    display: inline-block;
+      padding: 8px 20px;
+      margin: 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 1px ;}
+
+
+
+
+
+      .inner{
+        background-color: #ececec;
+    width: 60vw;
+    height: 70vh;
+    padding: 50px 50px 10px 50px;
+    padding-top: 50px;
+    box-shadow: 0px 5px 18px rgb(0 0 0 / 60%);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    }
+    
+    .inner section{
+        margin-bottom:100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 90%;
+        text-align: start;
+    }
+    .reservation .tranmission{
+        display: flex;
+        flex-direction: column;
+    }
+    .reservation .tranmission >div {
+        display: flex;
+        width: 105%;
+        /* height: 50%; */
+        text-align: center;
+    }
+    .reservation .tranmission >div >div{
+        margin-right: 140px;
+    }
+    .fuel >div{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    section h1{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #placeHolder{
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+    .inner section .tranmission{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .border{
+        
+        color: #ff7200;
+      
+        display: flex;
+    }
+    label{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    section h2{
+        margin-bottom:20px;
+        
+    }
+    select{
+        border: none;
+        outline: none;
+        border:2px solid;
+        padding:0 40px;
+    }
+    select,input{
+        font-size: 17px;
+        font-weight: 500;
+    
+    }
+    .inner button{
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #ff7200;
+        color:black  ;
+        padding:10px 25px;
+    }
+    input{
+        border: none;
+        border-bottom:2px solid;
+        outline: none;
+    }
+    .day{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .reservation{
+      margin-left: 15%;
+    margin-top: 8%;
+    }
+
+
+    @media (max-width: 800px)  {
+      .fuel >div {
+        display: flex;
+        width: 100%;
+        align-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+    }

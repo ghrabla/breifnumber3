@@ -1,0 +1,151 @@
+body{
+    
+    font-family: arial;
+}
+.container{
+    text-align: center;
+    margin: 0px 2em;
+    margin-top: 50px;
+}
+nav{
+    margin-left: -16px;
+    margin-top: -19px;
+  }
+  .logo{
+    width: 12%;
+    height: 12%;
+      margin-left: 6%;
+      margin-top: 2%;
+  }
+  ul {
+      list-style-type: none;
+      margin-top: 5%;
+      margin-right: 10%;
+      padding: 0;
+      overflow: hidden;
+      float: right;
+      
+    }
+    
+
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: rgb(14, 13, 13) ;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: bold;
+  
+    }
+    
+    li a:hover /* :not(.active)*/ { 
+      background-color: rgb(255 155 73);
+      border-radius: 2%;
+      color: white;
+    }
+input{
+    display: none;
+}
+.tag{
+    font-size: 20px;
+    margin: 1.5em 0px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    background: #efefef;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.images img{
+    max-width: 300px;
+    width: 300px;
+    height: 300px;
+    transition:  1s ease-in-out;
+    border-radius: 20px;
+}
+/*filter CSS */
+#cars:checked ~ .images > img:not([class*='cars']),
+ #moto:checked ~ .images > img:not([class*='moto']),
+ #berline:checked ~ .images > img:not([class*='berline']),
+ #compact:checked ~ .images > img:not([class*='compact']),
+ #engin:checked ~ .images > img:not([class*='engin']),
+ #utilitaire:checked ~ .images > img:not([class*='utilitaire']),
+ #camion:checked ~ .images > img:not([class*='camion'])
+ {
+   width: 0px;
+   height: 0px;
+}
+#all:checked ~ .all,
+#cars:checked ~ .tag1, 
+#moto:checked ~ .tag2,
+#camion:checked ~ .tag3,
+#compact:checked ~ .tag4,
+#utilitaire:checked ~ .tag5, 
+#engin:checked ~ .tag6,
+#berline:checked ~ .tag7
+{
+    background-color: rgb(255 155 73);      
+    color: white;
+} 
+.footer{
+  display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    width: 100%;
+}
+.footer-a{
+  margin-left: 5px;
+    text-decoration: none;
+    color: white;
+}
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  
+ .logo{
+   display: none;
+ }
+  .toggle-button {
+      display: flex;
+  }
+  .links{
+    display: none;
+    
+  }
+  
+  .links.active{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 243, 243);
+    padding: 10px;
+    
+  }
+  
+  
+}

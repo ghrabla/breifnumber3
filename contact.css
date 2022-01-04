@@ -1,311 +1,238 @@
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(./pictures/pexels-ibrahim-bilgin-10224346.jpg);
-  width: 100%;
-  height: 102vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
+.footer{
   display: flex;
-  flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(32, 31, 31);
+    color: white;
 }
 
-nav{
-  margin-left: -16px;
-  margin-top: -19px;
+.link-light small{
+  color: #fff;
 }
 .logo{
-    width: 12%;
-    margin-left: 6%;
-    margin-top: 2%;
+  width: 12%;
+  
+  margin-left: 6%;
+  margin-top: 2%;
 }
-ul {
-    list-style-type: none;
-    margin-top: 5%;
-    margin-right: 10%;
-    padding: 0;
-    overflow: hidden;
-    float: right;
+ul{
+  display: flex;
+  margin-top: 5%;
+  margin-right: 10%;
+  float: right;
+  list-style: none;
+}
+li a{
+  text-decoration: none;
+  padding: 14px 16px;
+  display: inline-flex;
+  font-weight: bold;
+  color: black;
+}
+form{
+  min-height: 100vh;
+  width: 100%;
+  /* background: #c8e8e9; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media{
+  display: flex;
+  justify-content: space-between;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+127deg, white, #ff7300);
+  
+}
+.container{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: rgb(255 155 73);
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: rgb(255 155 73);
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgb(255 155 73);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
+  background: #5029bc;
+}
+.follow{
+  margin-top: 10px;
+}
+
+@media (max-width: 950px) {
+  .container{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .container .content .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content{
+    flex-direction: column-reverse;
+  }
+ .container .content .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .container .content .left-side::before{
+   display: none;
+ }
+ .container .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  
+ .logo{
+   display: none;
+ }
+  .toggle-button {
+      display: flex;
+  }
+  .links{
+    display: none;
     
   }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white ;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-weight: bold;
-
-  }
-  
-  li a:hover /* :not(.active)*/ { 
-    background-color: rgb(255 155 73);
-    border-radius: 2%;
-    color: white;
-  }
-  /* .text{
-    margin-left: 10%;
-  } */
-  h1{
-    font-size: 60px;
-    color: white;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-  p{
-    color: white;
-    font-weight: bold;
-    line-height: 2;
-    margin-top: -3%;
-    text-align: center;
-  }
-  .btn{
-    border-color: rgb(255 155 73);
-    padding: 20px;
-    background-color: rgb(255 155 73);
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10%;
-    font-size: 14px;
-    margin-left: 23%;
-  }
-  .btn1{
-    border-color: rgb(255 155 73);
-    padding: 20px;
-    background-color: rgb(255 155 73);
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10%;
-    font-size: 14px;
-    margin-left: 40%;
-    position: relative;
-    top: 46px;
-  }
-  .divc{
-    margin-right: -14%;
-    padding: 20px;
-    background-color: #3c4043b0;
-  }
-  .btn-flex{
-    display: block;
-    margin-top: 5%;
-  }
-  .btn:hover{
-    border-radius: 12px;
-    border-color: rgb(255 155 73);
-    color:rgb(255 155 73) ;
-    background-color: white;
-    text-decoration: none;
-    border: solid 1px;
-  }
-  footer{
-    margin-top: 10%;
-    padding-bottom: 35px;
-    padding-left: 100px;
-    margin-left: -25px;
-    border-top: 1px solid;
-    border-color: orange;
-  }
-  .media{
-    position: relative;
-    top: 15px;
-    left: 55px;
-  }
-  .copy{
-    text-align: center;
-    margin-top: -55px;
-  }
-  .number{
-    margin-left: 74%;
-    margin-top: -4%;
-    text-decoration: none;
-    margin-top: -55px;
-  }
-  .contact-form {
-    width: 98%;
-    float: right;
-    margin-right: -8%;
-    display: flex;
-    margin-top: 5%;
-}
-label{
-  font-weight: bold;
-}
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid rgb(255 155 73);
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: rgb(255 155 73);
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  /* margin-right: 10%; */
-  font-size: 14px;
-  margin-left: 45%;
-}
-
-input[type=submit]:hover {
-  background-color: white;
-  color: rgb(255 155 73);
-  border: 1px solid;
-  border-radius: 20%;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: white;
-  padding: 20px;
-  border: 3px outset;
-  border-color: orange;
-  width: 75%;
-  margin-left: 12%;
-  position: relative;
-    top: -10%;
-}
-.pcontact{
-  margin-top: 40px;
-}
-@media (max-width: 480px) {
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(./pictures/pexels-ibrahim-bilgin-10224346.jpg);
+  .links.active{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 102vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
-   
-}
-h1{
-  font-size: 40px;
-  color: white;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 13px;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: rgb(255 155 73);
-  margin-left: 3px;
-  border: 1px solid;
-  border-radius: 16%;
-}
-ul {
-  list-style-type: none;
-  margin-top: -1%;
-  margin-right: 10%;
-  padding: 48px;
-  padding: 1px;
-  float: right;
-}
-.btn {
-  border-color: rgb(255 155 73);
-  padding: 12px;
-  background-color: rgb(255 155 73);
-  color: white;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  /* margin-right: 10%; */
-  font-size: 14px;
-  margin-left: -16px;
-  margin-right: 14%;
-  position: relative;
-  left: 30px;
-}
-p {
-  color: white;
-  font-weight: bold;
-  line-height: 3;
-  margin-top: -8%;
-  text-align: center;
-  margin-right: 32px;
-}
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-right: -44%;
-    position: relative;
-    right: 12%;
+    background-color: rgb(252, 252, 252);
+    padding: 10px;
     
   }
-  .logo{
-    width: 12%;
-    margin-left: 6%;
-    margin-top: 2%;
-    display: none;
-}
-.btn-flex {
-  display: block;
-  margin-top: 8%;
-  margin-right: -133%;
-}
-.copy {
-  text-align: center;
-  margin-top: 3px;
-  margin-right: 119px;
-  line-height: 16px;
-  font-size: 13px;
-}
-h1 {
-  font-size: 56px;
-  color: white;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  margin-right: 35px;
-
-}
-.brn{
-  display: none;
-}
-.number {
-  margin-left: -84%;
-  text-decoration: none;
-  margin-top: 1px;
-  font-size: 13px;
-}
-.media {
-  position: relative;
-  top: 5px;
-  left: 25px;
-  width: 374%;
-}
-.media a {
-  margin-right: 8px;
-  position: relative;
-  left: -19px;
-}
-}
   
+  
+}
+
 
   
   /* .glow-on-hover {

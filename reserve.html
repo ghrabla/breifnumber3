@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reserve.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <img class="logo" src="pictures/siteautologo-removebg-preview.png" alt="">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </a>
+            <ul class="links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+              </ul>
+          </nav>
+	</section>
+		  <section class="reservation">
+			<div class="inner">
+				<form action="" method="post"></form>
+				<section>
+	             <div class="all1">
+					  
+					<div class="Type">
+						<h2>Type of the vehicle</h2>
+						<select name="type" id="type" onchange="calcule()">
+							<option>Select Type</option>
+							<option>Moto</option>
+							<option>Citadine</option>
+							<option>Compact</option>
+							<option>Berline</option>
+							<option>Utilitaire</option>
+							<option>Engin de Chantier</option>
+							<option>Camion</option>
+						</select>
+					</div>
+	
+					<div class="tranmission">
+						<h2>Transmission</h2>
+						<div class="contenu">
+							<div>
+								<input type="radio" id="Manual" name="transmission">
+								<label class="Manual" for="Manual">Manual</label><br>
+							</div>
+							<div>
+								<input type="radio" id="Automatique" name="transmission">
+								<label class="Automatique" for="Automatique">Automatique</label><br>
+							</div>
+						</div>
+					</div>
+				 </div>
+	
+					<div class="fuel">
+						<h2>Fuel</h2>
+						<div class="contenu">
+							<div>
+								<input type="radio" id="Electrique" name="fuel" onclick="fuelID(this.id)">
+								<label class="Electrique" for="Electrique">Electrique</label><br>
+							</div>
+	
+							<div>
+								<input type="radio" id="Hybride" name="fuel" onclick="fuelID(this.id)">
+								<label class="Hybride" for="Hybride">Hybride</label><br>
+							</div>
+	
+							<div>
+								<input type="radio" id="Essence" name="fuel" onclick="fuelID(this.id)">
+								<label class="Essence" for="Essence">Essence</label><br>
+							</div>
+	
+							<div>
+								<input type="radio" id="Diesel" name="fuel" onclick="fuelID(this.id)">
+								<label class="Diesel" for="Diesel">Diesel</label><br>
+							</div>
+						</div>
+					</div>
+					<div>
+
+						<h2>Days :</h2>
+						<div class="day">
+							<input type="number" min="1" id="days">
+							<button class="btn">Submit</button>
+						</div>
+					</div>
+	
+					<div id="placeHolder">
+						<div class="border">
+							<h1>Total Price: &nbsp &nbsp</h1>
+							<h1 id="prix"></h1>
+							<h1>&nbsp $</h1>
+						</div>
+	
+					</div>
+	
+					<!-- <div class="confirmed">
+						<button id="confirmed" class="btn">Confirmed</button>
+					</div> -->
+	
+	
+				</section>
+				</form>
+	
+			</div>
+	
+	
+	
+    <script src="script.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
