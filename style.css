@@ -273,6 +273,8 @@ span{
     flex-direction: column;
     background-color: black;
     padding: 10px;
+    position: absolute;
+    right: 10px;
     
   }
   

@@ -2,6 +2,25 @@ var type = document.getElementById("type");
 var transmission = document.getElementsByName("transmission");
 var boite = document.querySelector(".fuel");
 var nbrDays = document.getElementById("days");
+const trans = document.querySelector("#trans")
+
+
+function createRadioInput(name, checked = false){
+ 
+    const div = document.createElement("div")
+    const label = document.createElement("label");
+    label.innerText = name; 
+    Object.assign({for: name})
+    const input = document.createElement("input")
+    Object.assign(input, {type: "radio", id:name, value: name, checked, disabled: true});
+
+    div.appendChild(input);
+    div.appendChild(label);
+    return div;
+}
+
+
+
 
 var Prix_total = 0;
 var fuel;
@@ -42,15 +61,17 @@ function prix_feul(prix, fuel) {
 function calcule() {
     const manual = document.querySelector("#Manual");
     total.innerHTML = "";
-    manual.checked = false;
-    document.querySelector("#Manual").disabled = false;
-    document.querySelector(".Manual").style.color = "black";
-    document.querySelector("#Automatique").checked = false;
-    document.querySelector("#Automatique").disabled = false;
-    document.querySelector(".Automatique").style.color = "black";
-    document.querySelector("#Hybride").checked = false;
-    document.querySelector("#Hybride").disabled = false;
-    document.querySelector(".Hybride").style.color = "black";
+    trans.innerHTML = "";
+    // manual.checked = false;
+    // document.querySelector("#Manual").disabled = false;
+    // document.querySelector(".Manual").style.color = "black";
+    // document.querySelector("#Automatique").checked = false;
+    // document.querySelector("#Automatique").disabled = false;
+    // document.querySelector(".Automatique").style.color = "black";
+    // document.querySelector("#Hybride").checked = false;
+    // document.querySelector("#Hybride").disabled = false;
+    // document.querySelector(".Hybride").style.color = "black";
+    
     document.querySelector("#Diesel").checked = false;
     document.querySelector("#Diesel").disabled = false;
     document.querySelector(".Diesel").style.color = "black";
@@ -63,48 +84,55 @@ function calcule() {
 
     switch (type.value) {
         case "Moto":
+            trans.innerHTML = "aucun"
             Prix_total = prix_feul(10, fuel);
-            document.querySelector("#Manual").disabled = true;
-            document.querySelector(".Manual").style.color = "gray";
-            document.querySelector("#Automatique").disabled = true;
-            document.querySelector(".Automatique").style.color = "gray";
-            document.querySelector("#Hybride").disabled = true;
-            document.querySelector(".Hybride").style.color = "gray";
+            // document.querySelector("#Manual").disabled = true;
+            // document.querySelector(".Manual").style.color = "gray";
+            // document.querySelector("#Automatique").disabled = true;
+            // document.querySelector(".Automatique").style.color = "gray";
+            // document.querySelector("#Hybride").disabled = true;
+            // document.querySelector(".Hybride").style.color = "gray";
             document.querySelector("#Diesel").disabled = true;
-            document.querySelector(".Diesel").style.color = "gray";
+            document.querySelector(".Diesel").style.color = "black";
 
-            console.log(fuel);
+            // console.log(fuel);
             break;
 
         case "Citadine": Prix_total = prix_feul(12, fuel);
-            document.querySelector("#Manual").checked = true;
-            document.querySelector("#Automatique").disabled = true;
-            document.querySelector(".Automatique").style.color = "gray";
+        trans.appendChild(createRadioInput("Manuel", true))
+            // document.querySelector("#Manual").checked = true;
+            
+            // document.querySelector("#Automatique").disabled = true;
+            // document.querySelector(".Automatique").style.color = "gray";
             break;
 
         case "Compact": Prix_total = prix_feul(14, fuel);
-            document.querySelector("#Manual").checked = true;
-            document.querySelector("#Automatique").disabled = true;
-            document.querySelector(".Automatique").style.color = "gray";
+        trans.appendChild(createRadioInput("Manuel", true))
+            // document.querySelector("#Manual").checked = true;
+            // document.querySelector("#Automatique").disabled = true;
+            // document.querySelector(".Automatique").style.color = "gray";
             document.querySelector("#Electrique").disabled = true;
             document.querySelector(".Electrique").style.color = "gray";
             break;
 
         case "Berline":
             Prix_total = (20 * 0.19) + prix_feul(20, fuel);
-            document.querySelector("#Automatique").checked = true;
-            document.querySelector("#Manual").disabled = true;
-            document.querySelector(".Manual").style.color = "gray";
+        trans.appendChild(createRadioInput("Automatique", true))
+            // document.querySelector("#Automatique").checked = true;
+            // document.querySelector("#Manual").disabled = true;
+            // document.querySelector(".Manual").style.color = "gray";
             document.querySelector("#Electrique").disabled = true;
             document.querySelector(".Electrique").style.color = "gray";
             break;
 
         case "Utilitaire":
             Prix_total = prix_feul(16, fuel);
-            document.querySelector("#Manual").checked = true;
+            trans.appendChild(createRadioInput("Manuel", true))
+            // document.querySelector("#Manual").checked = true;
             document.querySelector("#Diesel").checked = true;
-            document.querySelector("#Automatique").disabled = true;
-            document.querySelector(".Automatique").style.color = "gray";
+
+            // document.querySelector("#Automatique").disabled = true;
+            // document.querySelector(".Automatique").style.color = "gray";
             document.querySelector("#Electrique").disabled = true;
             document.querySelector(".Electrique").style.color = "gray";
             document.querySelector("#Hybride").disabled = true;
@@ -115,9 +143,10 @@ function calcule() {
 
         case "Engin de Chantier":
             Prix_total = prix_feul(900, fuel);
-            document.querySelector("#Manual").checked = true;
-            document.querySelector("#Automatique").disabled = true;
-            document.querySelector(".Automatique").style.color = "gray";
+            trans.appendChild(createRadioInput("Manuel", true))
+            // document.querySelector("#Manual").checked = true;
+            // document.querySelector("#Automatique").disabled = true;
+            // document.querySelector(".Automatique").style.color = "gray";
             document.querySelector("#Essence").disabled = true;
             document.querySelector(".Essence").style.color = "gray";
             document.querySelector("#Hybride").disabled = true;
@@ -126,10 +155,11 @@ function calcule() {
 
         case "Camion":
             Prix_total = (250 * 0.19) + prix_feul(250, fuel);
-            document.querySelector("#Automatique").checked = true;
+        trans.appendChild(createRadioInput("Automatique", true))
+            // document.querySelector("#Automatique").checked = true;
             document.querySelector("#Diesel").checked = true;
-            document.querySelector("#Manual").disabled = true;
-            document.querySelector(".Manual").style.color = "gray";
+            // document.querySelector("#Manual").disabled = true;
+            // document.querySelector(".Manual").style.color = "gray";
             document.querySelector("#Electrique").disabled = true;
             document.querySelector(".Electrique").style.color = "gray";
             document.querySelector("#Hybride").disabled = true;

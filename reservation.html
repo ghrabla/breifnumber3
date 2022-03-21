@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> location</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- <link rel="stylesheet" href="CSS/master.css">
+    
+    <link rel="stylesheet" href="CSS/normalise.css"> 
+    
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    
+</head>
+<body>
+   
+    <div class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">RentMeNow</a>
+            <ul class="main-nav">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./Gallerie.html">Gallerie </a></li>
+                <li><a class="titre-bold" href="#">Réservation</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <div class="Container">
+            <label class="label-1">choisir le type de vehicule</label>
+            <select class="select-1" id="select-1">
+                <option value="Choix">Choix</option>
+                <option id="moto" value="10">Moto</option>
+                <option id="citadine" value="12">Citadine</option>
+                <option id="compact" value="14">Compact</option>
+                <option id="berline" value="20">Berline</option>
+                <option id="utilitaire" value="16">Utilitaire</option>
+                <option id="engin" value="900">Engin de chantier</option>
+                <option id="camion" value="250">Camion</option>
+            </select>
+            <label class="label-2" for="vehicule_type">Fuel</label>
+            <select class="select-2" id="select-2">
+                <option value="0"></option>
+                <option id="electrique" value="0.05">Electrique</option>
+                <option id="hybride" value="0.09">Hybride</option>
+                <option id="essence" value="0.14">Essence</option>
+                <option id="diesel" value="0.21">Diesel</option>
+            </select>
+            <label class="label-2" for="vehicule_type">Gear</label>
+            <select class="select-2" id="select-3">
+                <option value="0"></option>
+                <option id="auto" value="0.19">auto</option> 
+                <option id="manual" value="0">manual</option> 
+            </select>
+            <Label class="label-3">Numbre jour</Label>
+            <input type="number" value="1" id="nbjour">
+            <button id="button---1" >Submit</button>
+            <span id="total-1">Prix Total</span>
+            <span id="total"></span>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <a href="#" class="logo">RentMeNow</a>
+            <p>We are social</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <p class="copyright" >
+                &copy; 2021 <span>RentMeNow All right Reserved  </span> 
+            </p>
+            
+        </div>
+    </div>
+    
+</body>
+
+<script src="reservation.js"></script>
+</html>
